@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #e63946;
+}
+
+header .logo {
+    height: 50px;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    margin-right: 20px;
+}
+
+header ul li a {
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header ul li a:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+.hero {
+    background: linear-gradient(135deg, #e63946, #000);
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #e63946;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f4f4f4;
+    color: #e63946;
+}
+
+.content-section {
+    padding: 50px 0;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #e63946;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.grid-item:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+.grid-item i {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-item {
+    display: flex;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+.product-item-alt {
+    flex-direction: row-reverse;
+}
+
+.product-item:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+.product-icon {
+    font-size: 3em;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-content {
+    text-align: left;
+}
+
+.clients {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.client-logo {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #e63946;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #c52834;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
