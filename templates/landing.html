@@ -5,7 +5,7 @@
 {% block content %}
 <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h1 class="text-4xl font-bold text-center mb-8">Get Your Free Quote</h1>
+        <h1 class="text-4xl font-bold text-center mb-8 text-primary">Get Your Free Quote</h1>
         <div class="max-w-3xl mx-auto">
             <p class="text-lg mb-6 text-center">
                 Discover how Speed Pay can revolutionize your payment processing. Fill out the form below, and one of our experts will provide you with a personalized quote tailored to your business needs.
@@ -15,22 +15,22 @@
                     {{ form.hidden_tag() }}
                     <div class="mb-4">
                         {{ form.name.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.name(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+                        {{ form.name(class="form-control") }}
                     </div>
                     <div class="mb-4">
                         {{ form.email.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.email(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+                        {{ form.email(class="form-control") }}
                     </div>
                     <div class="mb-4">
                         {{ form.company.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.company(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+                        {{ form.company(class="form-control") }}
                     </div>
                     <div class="mb-6">
                         {{ form.phone.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.phone(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+                        {{ form.phone(class="form-control") }}
                     </div>
                     <div class="flex items-center justify-center">
-                        {{ form.submit(class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline") }}
+                        {{ form.submit(class="btn btn-primary") }}
                     </div>
                 </form>
             </div>
@@ -40,20 +40,20 @@
 
 <section class="py-16">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">Why Choose Speed Pay?</h2>
+        <h2 class="text-3xl font-bold text-center mb-8 text-primary">Why Choose Speed Pay?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center">
-                <i class="fas fa-shield-alt text-4xl text-red-600 mb-4"></i>
+                <i class="fas fa-shield-alt text-4xl text-primary mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Secure Transactions</h3>
                 <p>State-of-the-art encryption and fraud prevention to keep your business safe.</p>
             </div>
             <div class="text-center">
-                <i class="fas fa-chart-line text-4xl text-red-600 mb-4"></i>
+                <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Competitive Rates</h3>
                 <p>Transparent pricing and low transaction fees to maximize your profits.</p>
             </div>
             <div class="text-center">
-                <i class="fas fa-headset text-4xl text-red-600 mb-4"></i>
+                <i class="fas fa-headset text-4xl text-primary mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
                 <p>Our dedicated team is always available to assist you with any issues.</p>
             </div>
