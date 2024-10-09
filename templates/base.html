@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}MerchantPro - Secure Payment Solutions{% endblock %}</title>
+    <title>{% block title %}Speed Pay - Secure Payment Solutions{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
@@ -13,8 +13,8 @@
         <nav class="container mx-auto px-6">
             <div class="flex justify-between items-center">
                 <a href="{{ url_for('index') }}" class="text-2xl font-bold flex items-center">
-                    <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo" class="h-8 w-8 mr-2">
-                    MerchantPro
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Speed Pay Logo" class="h-8 w-auto mr-2">
+                    Speed Pay
                 </a>
                 <div class="hidden md:flex space-x-6">
                     <a href="{{ url_for('index') }}">Home</a>
@@ -43,7 +43,7 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">MerchantPro</h3>
+                    <h3 class="text-lg font-semibold mb-4">Speed Pay</h3>
                     <p>Empowering businesses with secure payment solutions.</p>
                 </div>
                 <div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="mt-8 text-center">
-                <p>&copy; 2023 MerchantPro. All rights reserved.</p>
+                <p>&copy; 2023 Speed Pay. All rights reserved.</p>
             </div>
         </div>
     </footer>
