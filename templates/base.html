@@ -12,9 +12,8 @@
     <header class="py-4">
         <nav class="container mx-auto px-6">
             <div class="flex justify-between items-center">
-                <a href="{{ url_for('index') }}" class="text-2xl font-bold flex items-center">
-                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Speed Pay Logo" class="h-8 w-auto mr-2">
-                    Speed Pay
+                <a href="{{ url_for('index') }}" class="flex items-center">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Speed Pay Logo" class="h-12 w-auto">
                 </a>
                 <div class="hidden md:flex space-x-6">
                     <a href="{{ url_for('index') }}">Home</a>
@@ -39,11 +38,11 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="mt-12">
-        <div class="container mx-auto px-6">
+    <footer class="mt-12 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Speed Pay</h3>
+                <div class="flex items-center">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Speed Pay Logo" class="h-12 w-auto mr-4">
                     <p>Empowering businesses with secure payment solutions.</p>
                 </div>
                 <div>

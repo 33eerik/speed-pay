@@ -40,6 +40,19 @@ nav a:hover {
     color: var(--primary-color);
 }
 
+/* Logo styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
 /* Hero section */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?business,finance');
@@ -119,6 +132,10 @@ nav a:hover {
     .card {
         padding: 15px;
     }
+
+    .logo {
+        height: 36px;
+    }
 }
 
 /* Animations */
@@ -152,4 +169,10 @@ footer a {
 
 footer a:hover {
     color: var(--primary-color);
+}
+
+/* Footer logo styles */
+footer .logo {
+    height: 36px;
+    margin-right: 16px;
 }
