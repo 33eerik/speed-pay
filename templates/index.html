@@ -3,30 +3,30 @@
 {% block title %}MerchantPro - Secure Payment Solutions{% endblock %}
 
 {% block content %}
-<section class="hero text-white py-32">
-    <div class="container mx-auto px-6 text-center">
+<section class="hero">
+    <div class="container mx-auto px-6">
         <h1 class="text-5xl font-bold mb-4">Secure Payment Solutions for Your Business</h1>
         <p class="text-xl mb-8">Streamline your transactions with our cutting-edge merchant processing services.</p>
-        <a href="{{ url_for('contact') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">Get Started</a>
+        <a href="{{ url_for('contact') }}" class="btn">Get Started</a>
     </div>
 </section>
 
-<section class="py-16 bg-gray-100">
+<section class="py-16">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">Why Choose MerchantPro?</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose MerchantPro?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+            <div class="card service-card">
+                <i class="fas fa-shield-alt"></i>
                 <h3 class="text-xl font-semibold mb-2">Secure Transactions</h3>
                 <p>State-of-the-art encryption and fraud prevention to keep your business safe.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
+            <div class="card service-card">
+                <i class="fas fa-chart-line"></i>
                 <h3 class="text-xl font-semibold mb-2">Competitive Rates</h3>
                 <p>Transparent pricing and low transaction fees to maximize your profits.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <i class="fas fa-headset text-4xl text-blue-600 mb-4"></i>
+            <div class="card service-card">
+                <i class="fas fa-headset"></i>
                 <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
                 <p>Our dedicated team is always available to assist you with any issues.</p>
             </div>
@@ -34,41 +34,41 @@
     </div>
 </section>
 
-<section class="py-16">
+<section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                <i class="fas fa-credit-card text-4xl text-blue-600 mb-4"></i>
+            <div class="card service-card">
+                <i class="fas fa-credit-card"></i>
                 <h3 class="text-xl font-semibold mb-2">Credit Card Processing</h3>
                 <p>Accept all major credit cards with our reliable processing system.</p>
             </div>
-            <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                <i class="fas fa-mobile-alt text-4xl text-blue-600 mb-4"></i>
+            <div class="card service-card">
+                <i class="fas fa-mobile-alt"></i>
                 <h3 class="text-xl font-semibold mb-2">Mobile Payments</h3>
                 <p>Enable customers to pay using their smartphones and digital wallets.</p>
             </div>
-            <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                <i class="fas fa-globe text-4xl text-blue-600 mb-4"></i>
+            <div class="card service-card">
+                <i class="fas fa-globe"></i>
                 <h3 class="text-xl font-semibold mb-2">E-commerce Solutions</h3>
                 <p>Integrate secure payment gateways into your online store.</p>
             </div>
         </div>
         <div class="text-center mt-8">
-            <a href="{{ url_for('services') }}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">View All Services</a>
+            <a href="{{ url_for('services') }}" class="btn">View All Services</a>
         </div>
     </div>
 </section>
 
-<section class="py-16 bg-gray-100">
+<section class="py-16">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="card">
                 <p class="mb-4">"MerchantPro has revolutionized our payment processing. Their service is top-notch, and we've seen a significant increase in our transaction speed."</p>
                 <p class="font-semibold">- John Doe, CEO of TechStart</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="card">
                 <p class="mb-4">"The customer support team at MerchantPro is exceptional. They're always there when we need them, ensuring our business runs smoothly."</p>
                 <p class="font-semibold">- Jane Smith, Owner of Local Cafe</p>
             </div>
