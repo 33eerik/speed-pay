@@ -6,8 +6,8 @@
     --primary-color: #FF0000;
     --secondary-color: #808080;
     --background-color: #FFFFFF;
-    --text-color: #000000;
-    --card-background: #FFFFFF;
+    --text-color: #333333;
+    --card-background: #F8F8F8;
 }
 
 body {
@@ -27,6 +27,9 @@ body {
 header {
     background-color: var(--background-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -34,6 +37,7 @@ nav a {
     text-decoration: none;
     padding: 10px;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 nav a:hover {
@@ -55,16 +59,16 @@ nav a:hover {
 
 /* Hero section */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?business,finance');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?business,finance');
     background-size: cover;
     background-position: center;
     color: var(--background-color);
     text-align: center;
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-out;
 }
@@ -86,6 +90,7 @@ nav a:hover {
     border-radius: 30px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
 }
 
 .btn:hover {
@@ -98,7 +103,7 @@ nav a:hover {
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -130,7 +135,7 @@ nav a:hover {
     }
 
     .card {
-        padding: 15px;
+        padding: 20px;
     }
 
     .logo {
@@ -152,7 +157,7 @@ nav a:hover {
 
 /* Footer styles */
 footer {
-    background-color: var(--text-color);
+    background-color: #333333;
     color: var(--background-color);
     padding: 40px 0;
 }
@@ -175,4 +180,51 @@ footer a:hover {
 footer .logo {
     height: 36px;
     margin-right: 16px;
+}
+
+/* Additional styles for refinement */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.testimonial {
+    font-style: italic;
+    position: relative;
+    padding: 20px;
+}
+
+.testimonial::before {
+    content: '\201C';
+    font-size: 4rem;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.stats-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stats-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.stats-item .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.trust-badges img {
+    height: 60px;
+    margin: 10px;
 }

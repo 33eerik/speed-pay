@@ -13,7 +13,7 @@
 
 <section class="py-16">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Speed Pay?</h2>
+        <h2 class="section-title">Why Choose Speed Pay?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="card service-card">
                 <i class="fas fa-shield-alt"></i>
@@ -36,7 +36,7 @@
 
 <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+        <h2 class="section-title">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="card service-card">
                 <i class="fas fa-credit-card"></i>
@@ -62,13 +62,13 @@
 
 <section class="py-16">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+        <h2 class="section-title">What Our Clients Say</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card">
+            <div class="card testimonial">
                 <p class="mb-4">"Speed Pay has revolutionized our payment processing. Their service is top-notch, and we've seen a significant increase in our transaction speed."</p>
                 <p class="font-semibold">- John Doe, CEO of TechStart</p>
             </div>
-            <div class="card">
+            <div class="card testimonial">
                 <p class="mb-4">"The customer support team at Speed Pay is exceptional. They're always there when we need them, ensuring our business runs smoothly."</p>
                 <p class="font-semibold">- Jane Smith, Owner of Local Cafe</p>
             </div>
@@ -78,26 +78,26 @@
 
 <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Trusted by Businesses Worldwide</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div>
-                <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
-                <p class="text-2xl font-bold">10,000+</p>
+        <h2 class="section-title">Trusted by Businesses Worldwide</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="stats-item">
+                <i class="fas fa-users"></i>
+                <p class="number">10,000+</p>
                 <p>Happy Customers</p>
             </div>
-            <div>
-                <i class="fas fa-globe text-4xl text-blue-600 mb-4"></i>
-                <p class="text-2xl font-bold">50+</p>
+            <div class="stats-item">
+                <i class="fas fa-globe"></i>
+                <p class="number">50+</p>
                 <p>Countries Served</p>
             </div>
-            <div>
-                <i class="fas fa-dollar-sign text-4xl text-blue-600 mb-4"></i>
-                <p class="text-2xl font-bold">$1B+</p>
+            <div class="stats-item">
+                <i class="fas fa-dollar-sign"></i>
+                <p class="number">$1B+</p>
                 <p>Transactions Processed</p>
             </div>
-            <div>
-                <i class="fas fa-clock text-4xl text-blue-600 mb-4"></i>
-                <p class="text-2xl font-bold">99.99%</p>
+            <div class="stats-item">
+                <i class="fas fa-clock"></i>
+                <p class="number">99.99%</p>
                 <p>Uptime</p>
             </div>
         </div>
@@ -108,16 +108,16 @@
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-                <h2 class="text-3xl font-bold mb-6">About Speed Pay</h2>
+                <h2 class="section-title text-left">About Speed Pay</h2>
                 <p class="mb-4">Speed Pay is a leading provider of secure payment solutions, dedicated to empowering businesses with cutting-edge technology and unparalleled support.</p>
                 <p class="mb-4">Our mission is to simplify payment processing while ensuring the highest levels of security and reliability for our clients.</p>
                 <a href="{{ url_for('about') }}" class="btn mt-4">Learn More About Us</a>
             </div>
-            <div class="grid grid-cols-2 gap-4">
-                <img src="{{ url_for('static', filename='img/security-badge-1.png') }}" alt="Security Certification" class="mx-auto h-16">
-                <img src="{{ url_for('static', filename='img/security-badge-2.png') }}" alt="PCI DSS Compliant" class="mx-auto h-16">
-                <img src="{{ url_for('static', filename='img/trust-seal-1.png') }}" alt="Trust Seal" class="mx-auto h-16">
-                <img src="{{ url_for('static', filename='img/trust-seal-2.png') }}" alt="Verified Business" class="mx-auto h-16">
+            <div class="trust-badges grid grid-cols-2 gap-4">
+                <img src="{{ url_for('static', filename='img/security-badge-1.png') }}" alt="Security Certification" class="mx-auto">
+                <img src="{{ url_for('static', filename='img/security-badge-2.png') }}" alt="PCI DSS Compliant" class="mx-auto">
+                <img src="{{ url_for('static', filename='img/trust-seal-1.png') }}" alt="Trust Seal" class="mx-auto">
+                <img src="{{ url_for('static', filename='img/trust-seal-2.png') }}" alt="Verified Business" class="mx-auto">
             </div>
         </div>
     </div>
@@ -125,7 +125,7 @@
 
 <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Our Commitment to Security</h2>
+        <h2 class="section-title">Our Commitment to Security</h2>
         <div class="flex justify-center items-center space-x-8">
             <img src="{{ url_for('static', filename='img/pci-dss.png') }}" alt="PCI DSS Compliant" class="h-16">
             <img src="{{ url_for('static', filename='img/ssl-secure.png') }}" alt="SSL Encrypted" class="h-16">
