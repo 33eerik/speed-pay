@@ -102,8 +102,8 @@ nav a:hover {
 }
 
 .btn-primary:hover {
-    background-color: transparent;
-    color: var(--primary-color);
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
     transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -115,8 +115,8 @@ nav a:hover {
 }
 
 .btn-secondary:hover {
-    background-color: transparent;
-    color: var(--secondary-color);
+    background-color: darken(var(--secondary-color), 10%);
+    border-color: darken(var(--secondary-color), 10%);
     transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -161,6 +161,33 @@ nav a:hover {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 15px;
+}
+
+/* How It Works section styles */
+.how-it-works .card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-it-works .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.how-it-works .card-number {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-weight: bold;
 }
 
 /* Responsive design */
@@ -328,4 +355,55 @@ footer .fas:hover, footer .fab:hover {
 
 .text-secondary {
     color: var(--secondary-color) !important;
+}
+
+/* Quote section styles */
+.quote-section {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.quote-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quote-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.quote-form label {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.quote-form .btn-submit {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+}
+
+.quote-benefits {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.quote-benefits i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.quote-benefits h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.quote-benefits p {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
 }
