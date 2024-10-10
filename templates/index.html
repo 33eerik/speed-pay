@@ -3,13 +3,97 @@
 {% block title %}Speed Pay - Secure Payment Solutions{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <div class="container mx-auto px-6">
-        <h1 class="text-5xl font-bold mb-4">Secure Payment Solutions for Your Business</h1>
+<section class="hero bg-gray-100 py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold mb-4 text-primary">Secure Payment Solutions for Your Business</h1>
         <p class="text-xl mb-8">Streamline your transactions with our cutting-edge merchant processing services.</p>
-        <a href="{{ url_for('landing_page') }}" class="btn bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">Get Your Free Quote</a>
+        <a href="{{ url_for('landing_page') }}" class="btn bg-primary hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 transform hover:scale-105">Get Your Free Quote</a>
     </div>
 </section>
 
-<!-- Rest of the content remains the same -->
+<section class="py-16">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Speed Pay?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <i class="fas fa-shield-alt text-5xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Secure Transactions</h3>
+                <p>State-of-the-art encryption and fraud prevention to keep your business safe.</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-chart-line text-5xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Competitive Rates</h3>
+                <p>Transparent pricing and low transaction fees to maximize your profits.</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-headset text-5xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                <p>Our dedicated team is always available to assist you with any issues.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Trusted by Businesses Worldwide</h2>
+        <div class="flex justify-center items-center space-x-8 mb-8">
+            <img src="{{ url_for('static', filename='img/pci-dss.png') }}" alt="PCI DSS Compliant" class="h-16">
+            <img src="{{ url_for('static', filename='img/ssl-secure.png') }}" alt="SSL Encrypted" class="h-16">
+        </div>
+        <p class="text-xl mb-8">Join thousands of satisfied merchants who trust Speed Pay for their payment processing needs.</p>
+        <a href="{{ url_for('landing_page') }}" class="btn bg-primary hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">Start Your Free Trial</a>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                <h3 class="text-xl font-semibold mb-2">Get Your Quote</h3>
+                <p>Fill out our simple form to receive a personalized quote.</p>
+            </div>
+            <div class="text-center">
+                <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                <h3 class="text-xl font-semibold mb-2">Choose Your Plan</h3>
+                <p>Select the plan that best fits your business needs.</p>
+            </div>
+            <div class="text-center">
+                <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                <h3 class="text-xl font-semibold mb-2">Easy Setup</h3>
+                <p>Our team will guide you through the quick and easy setup process.</p>
+            </div>
+            <div class="text-center">
+                <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                <h3 class="text-xl font-semibold mb-2">Start Processing</h3>
+                <p>Begin accepting payments and watch your business grow!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Get Our Free E-book</h2>
+            <p class="text-xl text-center mb-8">"10 Strategies to Boost Your Business with Efficient Payment Processing"</p>
+            <form action="{{ url_for('download_ebook') }}" method="POST" class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <input type="email" name="email" placeholder="Enter your email" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md transition duration-300">Download Now</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="bg-primary py-16">
+    <div class="container mx-auto px-6 text-center text-white">
+        <h2 class="text-3xl font-bold mb-8">Ready to Boost Your Business?</h2>
+        <p class="text-xl mb-8">Get started with Speed Pay today and experience the difference in payment processing.</p>
+        <a href="{{ url_for('landing_page') }}" class="btn bg-white text-primary hover:bg-gray-200 font-bold py-3 px-6 rounded-full text-lg transition duration-300">Get Your Free Quote Now</a>
+    </div>
+</section>
 {% endblock %}

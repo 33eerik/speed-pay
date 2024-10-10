@@ -9,27 +9,29 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="py-4">
+    <header class="py-4 bg-white shadow-md">
         <nav class="container mx-auto px-6">
             <div class="flex justify-between items-center">
                 <a href="{{ url_for('index') }}" class="flex items-center">
                     <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Speed Pay Logo" class="h-12 w-auto">
                 </a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="{{ url_for('index') }}">Home</a>
-                    <a href="{{ url_for('services') }}">Services</a>
-                    <a href="{{ url_for('about') }}">About</a>
-                    <a href="{{ url_for('contact') }}">Contact</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="{{ url_for('index') }}" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="{{ url_for('services') }}" class="text-gray-700 hover:text-primary">Services</a>
+                    <a href="{{ url_for('about') }}" class="text-gray-700 hover:text-primary">About</a>
+                    <a href="{{ url_for('contact') }}" class="text-gray-700 hover:text-primary">Contact</a>
+                    <a href="{{ url_for('landing_page') }}" class="btn bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Get Free Quote</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
             <div id="mobile-menu" class="md:hidden hidden mt-4">
-                <a href="{{ url_for('index') }}" class="block py-2">Home</a>
-                <a href="{{ url_for('services') }}" class="block py-2">Services</a>
-                <a href="{{ url_for('about') }}" class="block py-2">About</a>
-                <a href="{{ url_for('contact') }}" class="block py-2">Contact</a>
+                <a href="{{ url_for('index') }}" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="{{ url_for('services') }}" class="block py-2 text-gray-700 hover:text-primary">Services</a>
+                <a href="{{ url_for('about') }}" class="block py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="{{ url_for('contact') }}" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+                <a href="{{ url_for('landing_page') }}" class="btn bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 mt-2 inline-block">Get Free Quote</a>
             </div>
         </nav>
     </header>

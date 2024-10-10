@@ -7,18 +7,45 @@
     <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl font-bold mb-8 text-primary">Thank You for Your Interest!</h1>
         <p class="text-xl mb-8">We've received your information and one of our payment experts will be in touch with you shortly to provide your personalized quote.</p>
-        <h2 class="text-2xl font-semibold mb-4 text-secondary">What's Next?</h2>
-        <ul class="list-disc list-inside text-left max-w-2xl mx-auto mb-8">
-            <li class="mb-2">Our expert will review your business needs and prepare a tailored solution.</li>
-            <li class="mb-2">We'll schedule a brief call to discuss your quote and answer any questions you may have.</li>
-            <li class="mb-2">You'll receive a detailed proposal outlining our recommended services and pricing.</li>
-            <li>Once you're ready, we'll guide you through a smooth onboarding process.</li>
-        </ul>
-        <h2 class="text-2xl font-semibold mb-4 text-secondary">In the Meantime</h2>
+        
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md mb-12">
+            <h2 class="text-2xl font-semibold mb-4 text-secondary">What's Next?</h2>
+            <ul class="list-disc list-inside text-left mb-6">
+                <li class="mb-2">Our expert will review your business needs and prepare a tailored solution.</li>
+                <li class="mb-2">We'll schedule a brief call to discuss your quote and answer any questions you may have.</li>
+                <li class="mb-2">You'll receive a detailed proposal outlining our recommended services and pricing.</li>
+                <li>Once you're ready, we'll guide you through a smooth onboarding process.</li>
+            </ul>
+            <p class="text-lg">Expected response time: <strong>Within 1 business day</strong></p>
+        </div>
+
+        <h2 class="text-3xl font-semibold mb-8 text-secondary">Join Our Satisfied Customers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4 italic">"Speed Pay has revolutionized our payment processing. Their rates are unbeatable!"</p>
+                <p class="font-semibold">- John D., Small Business Owner</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4 italic">"The customer support team at Speed Pay is always there when we need them. Excellent service!"</p>
+                <p class="font-semibold">- Sarah M., E-commerce Manager</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4 italic">"We've seen a 20% increase in online sales since switching to Speed Pay. Highly recommended!"</p>
+                <p class="font-semibold">- Michael R., CFO</p>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-4 text-secondary">While You Wait</h2>
         <p class="text-xl mb-8">Explore more about our services and how we've helped businesses like yours:</p>
-        <div class="flex justify-center space-x-4">
+        <div class="flex justify-center space-x-4 mb-12">
             <a href="{{ url_for('services') }}" class="btn btn-primary">Our Services</a>
             <a href="{{ url_for('about') }}" class="btn btn-secondary">About Us</a>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-secondary">Get a Head Start</h2>
+            <p class="text-lg mb-4">Download our free guide: "5 Ways to Optimize Your Payment Processing"</p>
+            <a href="{{ url_for('download_ebook') }}" class="btn btn-primary">Download Now</a>
         </div>
     </div>
 </section>

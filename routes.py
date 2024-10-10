@@ -1,7 +1,8 @@
-from flask import render_template, request, flash, redirect, url_for
+from flask import render_template, request, flash, redirect, url_for, send_file
 from app import app, db
 from models import Contact, Lead
 from forms import ContactForm, LeadForm
+import os
 
 @app.route('/')
 def index():
@@ -40,3 +41,21 @@ def landing_page():
 @app.route('/thank-you')
 def thank_you():
     return render_template('thank_you.html')
+
+@app.route('/download-ebook', methods=['POST'])
+def download_ebook():
+    email = request.form.get('email')
+    if email:
+        # Save the email to the database (you might want to create a new model for this)
+        new_lead = Lead(name="E-book Subscriber", email=email, company="Unknown", phone="Unknown")
+        db.session.add(new_lead)
+        db.session.commit()
+        
+        # Send the e-book
+        # For demonstration purposes, we'll just send a text file
+        # In a real scenario, you'd have an actual e-book file to send
+        ebook_path = os.path.join(app.root_path, 'static', 'ebook.txt')
+        return send_file(ebook_path, as_attachment=True, attachment_filename='10_strategies_for_efficient_payment_processing.txt')
+    else:
+        flash('Please provide a valid email address.', 'error')
+        return redirect(url_for('index'))

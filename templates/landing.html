@@ -6,31 +6,36 @@
 <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
         <h1 class="text-4xl font-bold text-center mb-8 text-primary">Get Your Free Quote</h1>
-        <div class="max-w-3xl mx-auto">
-            <p class="text-lg mb-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-xl mb-8 text-center">
                 Discover how Speed Pay can revolutionize your payment processing. Fill out the form below, and one of our experts will provide you with a personalized quote tailored to your business needs.
             </p>
             <div class="bg-white p-8 rounded-lg shadow-md">
-                <form method="POST" action="{{ url_for('landing_page') }}">
+                <div id="progress-bar" class="w-full h-2 bg-gray-200 rounded-full mb-6">
+                    <div id="progress" class="h-2 bg-primary rounded-full" style="width: 0%;"></div>
+                </div>
+                <form id="quote-form" method="POST" action="{{ url_for('landing_page') }}">
                     {{ form.hidden_tag() }}
-                    <div class="mb-4">
-                        {{ form.name.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.name(class="form-control") }}
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            {{ form.name.label(class="block text-gray-700 text-sm font-bold mb-2") }}
+                            {{ form.name(class="form-control", required=true) }}
+                        </div>
+                        <div>
+                            {{ form.email.label(class="block text-gray-700 text-sm font-bold mb-2") }}
+                            {{ form.email(class="form-control", required=true) }}
+                        </div>
+                        <div>
+                            {{ form.company.label(class="block text-gray-700 text-sm font-bold mb-2") }}
+                            {{ form.company(class="form-control", required=true) }}
+                        </div>
+                        <div>
+                            {{ form.phone.label(class="block text-gray-700 text-sm font-bold mb-2") }}
+                            {{ form.phone(class="form-control", required=true) }}
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        {{ form.email.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.email(class="form-control") }}
-                    </div>
-                    <div class="mb-4">
-                        {{ form.company.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.company(class="form-control") }}
-                    </div>
-                    <div class="mb-6">
-                        {{ form.phone.label(class="block text-gray-700 text-sm font-bold mb-2") }}
-                        {{ form.phone(class="form-control") }}
-                    </div>
-                    <div class="flex items-center justify-center">
-                        {{ form.submit(class="btn btn-primary") }}
+                    <div class="mt-8 text-center">
+                        {{ form.submit(class="btn btn-primary text-lg py-3 px-8") }}
                     </div>
                 </form>
             </div>
@@ -40,24 +45,87 @@
 
 <section class="py-16">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8 text-primary">Why Choose Speed Pay?</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary">Why Choose Speed Pay?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center">
-                <i class="fas fa-shield-alt text-4xl text-primary mb-4"></i>
+                <i class="fas fa-shield-alt text-5xl text-primary mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Secure Transactions</h3>
                 <p>State-of-the-art encryption and fraud prevention to keep your business safe.</p>
             </div>
             <div class="text-center">
-                <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
+                <i class="fas fa-chart-line text-5xl text-primary mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">Competitive Rates</h3>
                 <p>Transparent pricing and low transaction fees to maximize your profits.</p>
             </div>
             <div class="text-center">
-                <i class="fas fa-headset text-4xl text-primary mb-4"></i>
+                <i class="fas fa-headset text-5xl text-primary mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
                 <p>Our dedicated team is always available to assist you with any issues.</p>
             </div>
         </div>
     </div>
 </section>
+
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4 italic">"Speed Pay has transformed our payment processing. Their rates are unbeatable, and the customer support is top-notch!"</p>
+                <p class="font-semibold">- John Doe, CEO of TechStart</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4 italic">"We've seen a significant increase in our online sales since switching to Speed Pay. Their platform is user-friendly and reliable."</p>
+                <p class="font-semibold">- Jane Smith, E-commerce Manager at FashionHub</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="max-w-3xl mx-auto">
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">How long does it take to set up an account?</h3>
+                <p>Most accounts are set up within 1-2 business days after we receive all required information.</p>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">What types of payments can I accept?</h3>
+                <p>With Speed Pay, you can accept all major credit cards, debit cards, and digital wallets like Apple Pay and Google Pay.</p>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">Is there a contract or cancellation fee?</h3>
+                <p>We offer flexible month-to-month agreements with no long-term contracts or cancellation fees.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Ready to Get Started?</h2>
+        <p class="text-xl mb-8">Join thousands of satisfied merchants and start accepting payments with Speed Pay today!</p>
+        <a href="#" class="btn bg-white text-primary hover:bg-gray-200 font-bold py-3 px-8 rounded-full text-lg transition duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Get Your Free Quote Now</a>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('quote-form');
+    const progressBar = document.getElementById('progress');
+    const inputs = form.querySelectorAll('input[required]');
+    const totalInputs = inputs.length;
+
+    function updateProgress() {
+        const filledInputs = Array.from(inputs).filter(input => input.value.trim() !== '').length;
+        const progress = (filledInputs / totalInputs) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('input', updateProgress);
+    });
+});
+</script>
 {% endblock %}
