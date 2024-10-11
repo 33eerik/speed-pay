@@ -94,10 +94,10 @@ agentRequireRestartOnSave = false
 task = "shell.exec"
 args = """
 
-    git fetch origin
-    git merge origin/main --allow-unrelated-histories
-    git push -u origin main
-    """
+    git add .
+    git commit -m \"Update app configuration for Vercel deployment\"
+    git push origin main
+"""
 
 [[workflows.workflow]]
 name = "GitHub Sync and Push (Resolved)"
