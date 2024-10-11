@@ -1,3 +1,4 @@
+
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -27,6 +28,10 @@ with app.app_context():
     db.create_all()
 
 from routes import *
+
+# Add this handler function for Vercel
+def handler(event, context):
+    return app.wsgi_app(event, context)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
