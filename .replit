@@ -19,6 +19,10 @@ args = "Start Flask Server"
 task = "workflow.run"
 args = "Push to GitHub"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "GitHub Push"
+
 [[workflows.workflow]]
 name = "Start Flask Server"
 author = "agent"
@@ -44,6 +48,25 @@ args = """
 
     git config --global user.email \"you@example.com\"
     git config --global user.name \"Your Name\"
+    git remote set-url origin https://${GITHUB_TOKEN}@github.com/33eerik/speed-pay.git
+    git push -u origin main
+    """
+
+[[workflows.workflow]]
+name = "GitHub Push"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = """
+
+    git config --global user.email \"you@example.com\"
+    git config --global user.name \"Your Name\"
+    git add .
+    git commit -m \"Prepare for GitHub push\"
     git remote set-url origin https://${GITHUB_TOKEN}@github.com/33eerik/speed-pay.git
     git push -u origin main
     """
