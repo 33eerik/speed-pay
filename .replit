@@ -23,6 +23,18 @@ args = "Push to GitHub"
 task = "workflow.run"
 args = "GitHub Push"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "GitHub Sync and Push"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "GitHub Sync and Push (Resolved)"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "GitHub Sync and Push (Final)"
+
 [[workflows.workflow]]
 name = "Start Flask Server"
 author = "agent"
@@ -68,6 +80,57 @@ args = """
     git add .
     git commit -m \"Push project to GitHub\"
     git remote set-url origin https://$GITHUB_TOKEN@github.com/33eerik/speed-pay.git
+    git push -u origin main
+    """
+
+[[workflows.workflow]]
+name = "GitHub Sync and Push"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = """
+
+    git fetch origin
+    git merge origin/main --allow-unrelated-histories
+    git push -u origin main
+    """
+
+[[workflows.workflow]]
+name = "GitHub Sync and Push (Resolved)"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = """
+
+    git merge --abort
+    git fetch origin
+    git merge origin/main --strategy-option theirs
+    git push -u origin main
+    """
+
+[[workflows.workflow]]
+name = "GitHub Sync and Push (Final)"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = """
+
+    git fetch origin
+    git merge origin/main --allow-unrelated-histories
+    git add .
+    git commit -m \"Merge remote changes and push project to GitHub\"
     git push -u origin main
     """
 
