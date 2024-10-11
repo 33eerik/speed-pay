@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - MerchantPro{% endblock %}
+
+{% block content %}
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h1 class="text-4xl font-bold text-center mb-8">Our Services</h1>
+        <p class="text-xl text-center mb-12">Discover our comprehensive range of merchant processing solutions designed to meet your business needs.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-credit-card text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Credit Card Processing</h3>
+                <p class="mb-4">Accept all major credit cards with our secure and efficient processing system. We offer competitive rates and fast settlements.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Visa, MasterCard, American Express, Discover</li>
+                    <li>EMV chip card compatible</li>
+                    <li>Next-day funding available</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-mobile-alt text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Mobile Payments</h3>
+                <p class="mb-4">Enable your customers to pay using their smartphones and digital wallets. Stay ahead of the curve with contactless payment options.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Apple Pay, Google Pay, Samsung Pay</li>
+                    <li>NFC-enabled terminals</li>
+                    <li>QR code payments</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-globe text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">E-commerce Solutions</h3>
+                <p class="mb-4">Integrate secure payment gateways into your online store. Provide a seamless checkout experience for your customers.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Easy integration with popular e-commerce platforms</li>
+                    <li>Recurring billing options</li>
+                    <li>Advanced fraud protection</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-store text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Point of Sale (POS) Systems</h3>
+                <p class="mb-4">Streamline your in-store operations with our modern POS systems. Manage inventory, track sales, and process payments all in one place.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>User-friendly interface</li>
+                    <li>Real-time reporting and analytics</li>
+                    <li>Hardware and software solutions available</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Fraud Prevention</h3>
+                <p class="mb-4">Protect your business with our advanced fraud detection and prevention tools. Stay one step ahead of potential threats.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Real-time fraud scoring</li>
+                    <li>Address Verification Service (AVS)</li>
+                    <li>3D Secure authentication</li>
+                </ul>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-chart-bar text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Reporting and Analytics</h3>
+                <p class="mb-4">Gain valuable insights into your business with our comprehensive reporting tools. Make data-driven decisions to grow your revenue.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Customizable dashboards</li>
+                    <li>Transaction history and trends</li>
+                    <li>Export capabilities for further analysis</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+        <p class="text-xl mb-8">Contact us today to learn more about our services and how we can help your business grow.</p>
+        <a href="{{ url_for('contact') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">Contact Us</a>
+    </div>
+</section>
+{% endblock %}
